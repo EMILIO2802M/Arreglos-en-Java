@@ -1,0 +1,20 @@
+package arregloo;
+import javax.swing.JOptionPane;
+public class Arregloo {
+    public static void main(String[] args) {
+        int acum = 0;
+        int i;
+        int valores[] = new int[4];
+        String encabezado[] = {"|  HB", "|  HF", "|  PR", "|  OM", "|  TOTAL|"};
+        for (int x = 0; x < 5; x++) {
+            System.out.print(encabezado[x]+"\t ");
+        }
+           System.out.println ("  ");
+           for (i = 0; i < 4; i++) { 
+               valores[i] = Integer.parseInt(JOptionPane.showInputDialog(null, "ingresa un numero" ));
+               acum += valores[i];
+               System.out.print("|  " + valores[i]+"\t ");
+        }
+              System.out.print("|  "+acum+"   |");
+    }
+}
